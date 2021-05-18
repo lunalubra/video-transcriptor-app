@@ -41,8 +41,12 @@ const avatars = [
 ];
 
 export default function Login({ setToken }) {
-  const [appId, setAppId] = useState('');
-  const [appSecret, setAppSecret] = useState('');
+  const [appId, setAppId] = useState(
+    '6971355064514e46396e36413370376d624d4e3470653170346742784d56436a'
+  );
+  const [appSecret, setAppSecret] = useState(
+    '49374a506b31746c4e3873634643544e2d49777362654a4b5153626e63727464345574684e3550655f614a586b6c65746b78413154354f48315f76575672794f'
+  );
 
   const toast = useToast();
 
@@ -201,10 +205,12 @@ export default function Login({ setToken }) {
                 onChange={(e) => setAppId(e.target.value)}
               />
               <Input
+                type="password"
                 placeholder="appSecret"
                 bg={'gray.100'}
                 border={0}
                 color={'gray.500'}
+                style={{ textSecurity: 'disc', WebkitTextSecurity: 'disc' }}
                 _placeholder={{
                   color: 'gray.500'
                 }}
